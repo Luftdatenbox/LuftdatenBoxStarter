@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  LuftdatenBoxStart:
+    build:
+      context: .
+      dockerfile: amd64/Dockerfile
+    image: luftdatenboxstart:latest
+    ports:
+      - 80:80
+
+  LuftdatenBoxStartRaspberryPi:
+    build:
+      context: .
+      dockerfile: arm32v7/Dockerfile
+    image: luftdatenboxstart:latest
+    ports:
+      - 80:80
