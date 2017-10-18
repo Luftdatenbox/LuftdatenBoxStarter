@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  LuftdatenBoxStart:
+    image: amd64/nginx
+    networks:
+      - frontend
+    ports:
+      - 80:80
+    volumes:
+      - luftdatenboxstart-html:/usr/share/nginx/html
+#    deploy:
+#      restart: always
+
+networks:
+  frontend:
+
+volumes:
+  luftdatenboxstart-html:

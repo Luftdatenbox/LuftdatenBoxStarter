@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  LuftdatenBoxStart:
+    image: arm32v7/nginx
+    networks:
+      - frontend
+    ports:
+      - 80:80
+    volumes:
+      - luftdatenboxstart-html:/usr/share/nginx/html
+#    deploy:
+#      restart: always
+
+networks:
+  frontend:https://doi-janky.infosiftr.net/job/multiarch/job/arm32v7/job/nginx/
+
+volumes:
+  luftdatenboxstart-html:
