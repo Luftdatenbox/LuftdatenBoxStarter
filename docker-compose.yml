@@ -13,6 +13,6 @@ services:
     build:
       context: .
       dockerfile: arm32v7/Dockerfile
-    image: luftdatenboxstart:latest
+    image: s3ler/luftdatenboxstart:latest
     ports:
       - 80:80
