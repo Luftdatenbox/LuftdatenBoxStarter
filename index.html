@@ -1,35 +1,109 @@
 <!doctype html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Luftdaten Box</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="manifest" href="site.webmanifest">
-        <link rel="apple-touch-icon" href="icon.png">
-        <!-- Place favicon.ico in the root directory -->
+    <link rel="manifest" href="site.webmanifest">
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-    </head>
-    <body>
-        <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
+    <link rel="stylesheet" href="css/mdlcardbackground.css">
+    <link rel="stylesheet" href="css/mdl/1.3.0/MaterialIcon.css">
+    <link rel="stylesheet" href="css/mdl/1.3.0/material.min.css">
+    <script defer src="js/mdl/1.3.0/material.min.js"></script>
+</head>
+<body>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
 
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-	<a href="grafana">Grafana</a>
-	<a href="nodered">Node-Red</a>
-	<a href="chronograf">Chronograf</a>
-	<a href="portainer">Portainer</a>
-        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+            <span class="mdl-layout-title">Luftdaten Box</span>
 
-    </body>
+            <div class="mdl-layout-spacer"></div>
+
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="grafana">Grafana</a>
+                <a class="mdl-navigation__link" href="nodered">Node-Red</a>
+                <a class="mdl-navigation__link" href="chronograf">Chronograf</a>
+                <a class="mdl-navigation__link" href="impressum.html">Impressum</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Admintools</span>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="proxyusermanagement">Proxy User Management</a>
+            <a class="mdl-navigation__link" href="portainer">Portainer</a>
+        </nav>
+    </div>
+
+    <main class="mdl-layout__content">
+        <div class="mdl-grid">
+
+            <div
+                class="app-card-wide mdl-card grafana-pic mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-shadow--2dp">
+                <div class="mdl-card__media mdl-color-text--grey-50">
+                    <h3><a href="grafana"></a></h3>
+                </div>
+                <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+                    <div class="minilogo"></div>
+                    <div>
+                        <strong>Grafana</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="mdl-card app-card-wide node-red-hexagon mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-shadow--2dp">
+                <div class="mdl-card__media mdl-color-text--grey-50">
+                    <h3><a href="nodered"></a></h3>
+                </div>
+
+                <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+                    <div class="minilogo"></div>
+                    <div>
+                        <strong>Node-Red</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mdl-card app-card-wide influxdb_logo mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-shadow--2dp">
+                <div class="mdl-card__media mdl-color-text--grey-50">
+                    <h3><a href="chronograf"></a></h3>
+                </div>
+
+                <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+                    <div class="minilogo"></div>
+                    <div>
+                        <strong>Chronograf</strong>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</div>
+
+</body>
+
+<script>
+    Array.prototype.forEach.call(document.querySelectorAll('.mdl-card__media'), function (el) {
+        var link = el.querySelector('a');
+        if (!link) {
+            return;
+        }
+        var target = link.getAttribute('href');
+        if (!target) {
+            return;
+        }
+        el.addEventListener('click', function () {
+            location.href = target;
+        });
+    });
+</script>
+
 </html>

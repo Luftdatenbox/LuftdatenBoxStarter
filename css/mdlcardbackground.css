@@ -1,0 +1,46 @@
+.app-card-wide.mdl-card {
+    width: 300px;
+}
+
+.app-card-wide .mdl-card__media {
+    cursor: pointer;
+}
+
+.mdl-card.grafana-pic {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+}
+.grafana-pic .mdl-card__media {
+    height: 200px;
+    background-color: #d3d3d3;
+    background-image: url('../img/grafana_icon.svg');
+    background-repeat: no-repeat;
+    background-size:  auto 200px ;
+}
+
+.mdl-card.node-red-hexagon {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+}
+.node-red-hexagon .mdl-card__media {
+    height: 200px;
+    background-color: #d3d3d3;
+    background-image: url('../img/node-red-hexagon.svg');
+    background-repeat: no-repeat;
+    background-size:  auto 200px ;
+}
+
+.mdl-card.influxdb_logo {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+}
+.influxdb_logo .mdl-card__media {
+    height: 200px;
+    background-color: #d3d3d3;
+    background-image: url('../img/influxdb_logo.svg');
+    background-repeat: no-repeat;
+    background-size:  auto 200px ;
+}
